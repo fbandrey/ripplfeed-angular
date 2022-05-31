@@ -1,0 +1,11 @@
+.feed {
+  padding: 0 3em
+}
+
+.feed md-card, .feed md-card md-card-header {
+  margin-bottom: 10px;
+}
+
+.feed md-card md-card-header .datetime {
+  font-size: 80%;
+}

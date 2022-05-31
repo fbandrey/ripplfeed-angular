@@ -1,0 +1,21 @@
+<div class="dashboard">
+  <h1>List of streamers</h1>
+
+  <md-grid-list cols="8" rowHeight="1:1" gutterSize="10px">
+    <md-grid-tile *ngFor="let user of users" class="dj_tile">
+      <a (click)="startPlaying(user)" *ngIf="!user.playing" class="pointer">
+        <md-icon class="md-72">play_circle_outline</md-icon>
+      </a>
+      <a (click)="stopPlaying(user)" *ngIf="user.playing" class="pointer">
+        <md-icon class="md-72">pause_circle_outline</md-icon>
+      </a>
+      <md-grid-tile-footer>
+        DJ {{ user.attributes['nick-name'] }}
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+
+  <p>
+    Перетащи этот букмарклет <a [href]="scriptString()">=RF=</a> на тулбар браузера (для Firefox) или внеси его в Избранное (для InternetExplorer).
+  </p>
+</div>

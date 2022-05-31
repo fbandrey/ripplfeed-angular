@@ -1,0 +1,21 @@
+<md-toolbar color="primary">
+  <span routerLink='/' class="pointer">RipplFeed</span>
+  <span class="spacer"></span>
+
+  <div *ngIf="session.user()">
+    <md-toolbar color="primary">
+      <button md-button [mdMenuTriggerFor]="navMenu"><md-icon>menu</md-icon> Account</button>
+    </md-toolbar>
+
+    <md-menu #navMenu="mdMenu">
+      <button md-menu-item routerLink='/feed'>My feed</button>
+      <button md-menu-item routerLink='/settings'>Settings</button>
+      <button md-menu-item (click)="logout()">Sign out</button>
+    </md-menu>
+  </div>
+
+  <div *ngIf="!session.user()">
+    <button md-button routerLink='/signin'>Sign in</button>
+    <button md-button routerLink='/signup'>Sign up</button>
+  </div>
+</md-toolbar>

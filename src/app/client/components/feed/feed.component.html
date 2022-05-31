@@ -1,0 +1,34 @@
+<div class="feed">
+  <h1>My feed</h1>
+
+  <md-card *ngFor="let item of items">
+    <md-card-header fxLayout="row">
+      <div fxFlex="auto">
+        <span class="datetime grey">{{ item.attributes['created-at'] | date:'MM/dd/yyyy @ h:mma' }}</span>
+      </div>
+
+      <div fxFlex="initial">
+        <a class="grey pointer" [mdMenuTriggerFor]="itemMenu">
+          <md-icon>settings</md-icon>
+        </a>
+      </div>
+
+      <md-menu #itemMenu="mdMenu">
+        <button md-menu-item>Edit tags</button>
+        <button md-menu-item (click)="destroy(item)">Remove</button>
+      </md-menu>
+    </md-card-header>
+
+    <md-card-content>
+      <span class="content" *ngIf="!item.is_full_version">
+        {{ item.attributes.text.crop(textLimit) }}
+        <a (click)="toggleVersion(item)" href="javascript://" *ngIf="item.attributes.text.length > textLimit">more</a>
+      </span>
+      <span class="content" *ngIf="item.is_full_version">
+        {{ item.attributes.text }}
+        <a (click)="toggleVersion(item)" href="javascript://">less</a>
+      </span>
+    </md-card-content>
+  </md-card>
+
+</div>

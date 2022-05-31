@@ -1,0 +1,21 @@
+<form class="signin-form" #userForm = "ngForm" (ngSubmit) = "submit(userForm.value)">
+  <md-card>
+    <md-card-content flex>
+      <p>
+        <md-input-container class="full-width">
+          <input mdInput ngModel required placeholder="E-mail" name="email">
+        </md-input-container>
+      </p>
+
+      <p>
+        <md-input-container class="full-width">
+          <input mdInput ngModel required type="password" placeholder="Password" name="password" autocomplete="off">
+        </md-input-container>
+      </p>
+    </md-card-content>
+
+    <div md-card-actions align="end">
+      <button md-raised-button>Login</button>
+    </div>
+  </md-card>
+</form>

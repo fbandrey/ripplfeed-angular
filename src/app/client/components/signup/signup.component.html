@@ -1,0 +1,37 @@
+<form class="signup-form" #userForm = "ngForm" (ngSubmit) = "submit(userForm.value)">
+  <md-card>
+    <md-card-header>
+      <md-card-title>Your personal data</md-card-title>
+    </md-card-header>
+
+    <md-card-content>
+      <md-input-container>
+        <input mdInput placeholder="E-mail" name="email" ngModel>
+      </md-input-container>
+
+      <md-input-container>
+        <input mdInput placeholder="Username" name="nick_name" ngModel>
+      </md-input-container>
+
+      <md-input-container>
+        <input mdInput placeholder="First name" name="first_name" ngModel>
+      </md-input-container>
+
+      <md-input-container>
+        <input mdInput placeholder="Last name" name="last_name" ngModel>
+      </md-input-container>
+
+      <md-input-container>
+        <input mdInput type="password" placeholder="Password" name="password" ngModel>
+      </md-input-container>
+
+      <md-input-container>
+        <input mdInput type="password" placeholder="Confirmation" name="password_confirmation" ngModel>
+      </md-input-container>
+    </md-card-content>
+
+    <md-card-actions>
+      <button md-raised-button>Submit</button>
+    </md-card-actions>
+  </md-card>
+</form>

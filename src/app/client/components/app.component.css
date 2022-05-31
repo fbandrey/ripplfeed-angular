@@ -1,0 +1,57 @@
+/deep/ * {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/deep/ .pointer {
+  cursor: pointer;
+}
+
+/* --- Fixes ---  */
+/deep/ .mat-card-header-text {
+  margin: 0 !important;
+}
+
+/* --- Icons ---  */
+/deep/ .material-icons.md-24 {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+/deep/ .material-icons.md-36 {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+}
+/deep/ .material-icons.md-48 {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+}
+/deep/ .material-icons.md-60 {
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+}
+/deep/ .material-icons.md-72 {
+  font-size: 72px;
+  width: 72px;
+  height: 72px;
+}
+/deep/ .material-icons.md-84 {
+  font-size: 84px;
+  width: 84px;
+  height: 84px;
+}
+
+/* /deep/ .material-icons.md-x1 { font-size: 1.4em; }
+/deep/ .material-icons.md-x2 { font-size: 2em; }
+/deep/ .material-icons.md-x3 { font-size: 3em; }
+/deep/ .material-icons.md-x4 { font-size: 4em; }
+/deep/ .material-icons.md-x5 { font-size: 5em; }
+/deep/ .material-icons.md-x6 { font-size: 6em; } */
+
+/* --- Colors ---  */
+
+/deep/ .grey {
+  color: #999999;
+}
